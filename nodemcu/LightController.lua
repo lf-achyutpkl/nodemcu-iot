@@ -15,7 +15,7 @@ function LightController.initialSetup()
 end
 
 
-function LightController.handleLight()
+function LightController.handleLight(client, topic, data)
     local pin_no = tonumber(data)
     if pin_no ~= nil then
         if topic == LIGHT_ON then
